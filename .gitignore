@@ -1,0 +1,7 @@
+node_modules/
+./frontend/node_modules
+mynotes/env/
+mynotes/api/__pycache__/*
+mynotes/mynotes/__pycache__/*
+package-lock.json
+package.json

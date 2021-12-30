@@ -1,0 +1,46 @@
+1) create venv --> virtualenv env --> move it inside django project folder after next step
+2) activate --> source env/bin/activate
+3) django-admin --version --> 3.2.8
+4) django-admin startproject mynotes
+5) python3 manage.py runserver
+6) settings.p --> installed apps --> api.apps.AppConfig
+7) in views.py of api --> created a getRoutes method with JsonResponse
+8) created a urls.py in the api app to create a route
+9) in the urls.py of mynotes we connected the api.urls through include
+10) we go to https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1VhWTZ3YkE3WmtnSjFzeWg3RWk0bUtfSzNhd3xBQ3Jtc0tucW1pTW5tWW1SOWRVaTk5N1NVY19FV2RlVnk3dkxmTFljOVMweTI1ZUtSYzR3NnMwTkVfdGc3aDJaOFROOVJZZHRQUU1SSGRoNEphd2NRTW9aaXFqMEliNEpkZGMzX19ZX1pVWWE2eUNCejM0Q3NHOA&q=https%3A%2F%2Fgithub.com%2Fdivanov11%2FDjango-React-NotesApp
+to copy the routes variable (list) from views.py of api
+11) routes is the list of end points with method types 
+12) api.models.py to create models, the diffrence b/w auto_now and auto_now_add is that latter is used for only once placement i.e creation
+while auto_now is for updates
+13) we created a 50 character limit on the str method of models
+14) first migrate then makemigrations and migrate
+15) python3 manage.py createsuperuser  
+16) superuser arsalan.knysys@gmail.com, arsalan, 123
+17) register the Notes models in the admin.py of api
+18) django rest frame work will be used for api
+19) now we'll create api's using restframwork
+20) we'll use api_view decorator and Response from rest_framework in the view getRoutes
+21) created a serializer in api using the rest_framework
+22) we use it in api view as serializer = NoteSerializer(notes,many=True)
+23) to get one entery of the NOte table we created a new view of GET and the serializer object gets many=False
+24) in urls notes/<str:pk>/ corrensponds to api.views def getNotes(request,pk):
+                                                           notes = Note.objects.get(id=pk)
+
+NOW MOVING TO React
+1) npx create-react-app frontend --> showed error of upgrade node version 
+2) npm install -g n --> install node version manager
+3) sudo n stable --> upgrades to v16.13.1 (with npm 8.1.2)
+4) run by cd into front end and npm start
+5) running at port 3000
+6) for the flow of prog we deleted multiple files in the src folder , {setuptest.js,reportwebvitals.js,logo.svg, index.css,app.test.js}
+7) In App.js cleared the header script and kept everything <div className="App"> 
+8) create two folders in src --> components and pages
+9) in components add a file Header.js
+10) we add an extension called es7 react/redux, where we'll use rafce , react arrow functional component exported will be used,
+11) auto rename tag extension will be used to complete tags automatically and we'll install prettier
+12) we just typed rafce and it will spit out the code for a fucntional component that uses arrow functions 
+
+13) to render this , we import the ./component/header.js in app.js to render , this is where the es7 extension helps, just type imp and it will spit out the boiler plate code
+14)the pages in the src we created a file NotesListPage.js and use rafce to get the code of arrow code
+15) we imported this in the app.js with same imp and using ./pages/NOteslistPage.js
+
